@@ -11,7 +11,6 @@ router.get('/', (req, res) =>{
 router.get('/:id', (req,res) =>{
   const id = req.params.id
   const postId = posts.find(post => post.id == id)
-  console.log(postId);
   
   res.json(postId)
 })
