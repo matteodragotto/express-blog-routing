@@ -9,7 +9,11 @@ router.get('/', (req, res) =>{
 
 //show
 router.get('/:id', (req,res) =>{
-  res.json(`Mostro il post con id ${req.params.id}`)
+  const id = req.params.id
+  const postId = posts.find(post => post.id == id)
+  console.log(postId);
+  
+  res.json(postId)
 })
 
 //store
